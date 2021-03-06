@@ -1,0 +1,1 @@
+build : ; ng build --prod
