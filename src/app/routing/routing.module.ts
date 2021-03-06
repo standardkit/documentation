@@ -4,9 +4,10 @@ import { PageLayout } from '../layout/page/page.layout';
 import { GettingStartedPage } from '../pages/getting-started/getting-started.page';
 
 const routes: Routes = [
+  {path: '', pathMatch: 'full', redirectTo: 'getting-started'},
   {
     path: '', component: PageLayout, children: [
-      {path: '', pathMatch: 'full', component: GettingStartedPage}
+      {path: 'getting-started', component: GettingStartedPage}
     ]
   }
 ];

@@ -1,8 +1,22 @@
-<img
-  src="assets/standardkit-icon.png"
-  alt="StandardKit Icon">
-<h1>StandardKit Docs</h1>
-<hr>
-<router-outlet></router-outlet>
-<hr>
-&copy; StandardKit
+<sk-dashboard-layout>
+
+  <sk-navigation-bar>
+    <sk-brand>
+      <sk-image src="assets/standardkit-icon.png"></sk-image>
+      StandardKit Docs
+    </sk-brand>
+  </sk-navigation-bar>
+
+  <sk-sidebar>
+    <sk-navigation>
+      <sk-navigation-item
+        icon="home"
+        route="/getting-started">
+        Getting Started
+      </sk-navigation-item>
+    </sk-navigation>
+  </sk-sidebar>
+
+  <router-outlet></router-outlet>
+
+</sk-dashboard-layout>
