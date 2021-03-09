@@ -1,11 +1,119 @@
-<sk-title>Getting Started</sk-title>
-<sk-divider></sk-divider><!-- TODO : Border bottom for title instead (diluted color of title itself or override)-->
+<sk-section>
+  <sk-title heading="1">Getting Started</sk-title>
+  <sk-paragraph size="xl">Get started with StandardKit</sk-paragraph>
+</sk-section>
 
-<br><!-- TODO : Margin of divider instead-->
-<sk-subtitle>Introduction</sk-subtitle>
-<p>Welcome to the StandardKit Docs!</p>
+<sk-section>
+  <sk-title>Introduction</sk-title>
+  <sk-alert type="error">
+    blablabla
+    <sk-link>Link to something
+      <sk-icon icon="arrow-right"></sk-icon>
+    </sk-link>
+  </sk-alert>
 
-<!--<sk-section> TODO : Create component-->
-<sk-subtitle>Installation</sk-subtitle>
-<sk-code-block>npm install --save @standardkit/styles</sk-code-block><!--TODO : Style this-->
-<!--</sk-section>-->
+  <sk-alert type="warning">
+    blablabla
+    <sk-link>
+      <sk-icon icon="blabl"></sk-icon>
+    </sk-link>
+  </sk-alert>
+
+  <sk-paragraph>
+    Welcome to the StandardKit Docs!
+    <sk-highlight type="bold">Some bold word</sk-highlight>
+  </sk-paragraph>
+
+  <sk-code-block
+    (copy)="onCopy($event)"
+    language="bash">
+    npm install --save @standardkit/styles
+    next line of codeblock
+    linke 3
+  </sk-code-block>
+
+  <sk-subtitle>Something else</sk-subtitle>
+  <sk-paragraph>blabla</sk-paragraph>
+  <sk-image
+    caption="Underwriting of the image"
+    src="/assets/standardkit-icon.png"></sk-image>
+</sk-section>
+
+<sk-section>
+  <sk-title>More parts</sk-title>
+  <sk-paragraph>blabla</sk-paragraph>
+  <sk-code-block
+    (copy)="onCopy(code)"
+    [code]="code"
+    language="js">
+  </sk-code-block>
+
+  <sk-alert>Informational alert</sk-alert>
+
+  <sk-paragraph>
+    blabalbal
+    <sk-highlight type="code"></sk-highlight>
+  </sk-paragraph>
+</sk-section>
+
+<sk-section>
+  <sk-title>Last section</sk-title>
+
+  <sk-row>
+
+    <sk-column [span]="{'xs': 12, 's': 6, 'l': 4 }">
+      <sk-list-item icon="list">
+        <sk-list-title>Why StandardKit?</sk-list-title>
+        Some explanation
+      </sk-list-item>
+    </sk-column>
+
+    <sk-column
+      span="12"
+      span-l="4"
+      span-s="6">
+      <sk-list-item>
+        <sk-icon icon="list"></sk-icon>
+        <sk-list-title>Why StandardKit?</sk-list-title>
+        Some explanation
+      </sk-list-item>
+    </sk-column>
+
+    <sk-column
+      span="12"
+      span-l="4"
+      span-s="6">
+      <sk-list-item
+        (skClick)="onClick()"
+        [clickable]="true">
+        <sk-icon icon="list"></sk-icon>
+        <sk-list-title>Why StandardKit?</sk-list-title>
+        Some explanation
+      </sk-list-item>
+    </sk-column>
+
+  </sk-row>
+</sk-section>
+
+<sk-divider></sk-divider>
+
+<sk-bar align="space-between">
+  <span>
+    <sk-icon icon="arrow-left"></sk-icon>
+    <sk-link route="/back">Go back</sk-link>
+  </span>
+
+  <span>
+    <sk-icon icon="arrow-left"></sk-icon>
+    <sk-link route="/back">Go back</sk-link>
+  </span>
+</sk-bar>
+
+
+<sk-scroll-navigation>
+  <sk-scroll-item>part 1</sk-scroll-item>
+  <sk-scroll-item>section 2</sk-scroll-item>
+</sk-scroll-navigation>
+
+<!--TODO : Anchor tags to go to specific sections-->
+<!--TODO : Column layout for scrollspy on the right-->
