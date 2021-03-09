@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { StandardKitModule } from '@standardkit/angular-components';
 import { DocsComponent } from './docs.component';
 import { DocsLayoutModule } from './layout/layout.module';
+import { DocsPagesModule } from './pages/pages.module';
 import { DocsRoutingModule } from './routing/routing.module';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { DocsRoutingModule } from './routing/routing.module';
   imports: [
     BrowserModule,
     DocsLayoutModule,
+    DocsPagesModule,
     DocsRoutingModule,
     StandardKitModule.forRoot({
       iconSet: 'material-design-icons'
